@@ -14,11 +14,11 @@ MonoBehaviour:
   id: kataZenerCards
   title: Zener Cards
   author: Katarina
-  description: "Zener Cards - V1.0\n\"...But anyway, why don\u2019t we start with
+  description: "Zener Cards - V1.0.2\n\"...But anyway, why don\u2019t we start with
     the classic\u2026 Zener Cards.\"\n\r\nModule ID: kataZenerCards\n\r\nModule Idea
     created by: Pruz\nModule Implemented by: Katarina\r\n\r\nTP-Supported.\r\n\r\nHTML
     Manual Version:\r\nhttps://ktane.timwi.de/HTML/Zener%20Cards.html\r\n\r\nIf there
     are any problems that you may have, contact me via Discord: Smexy Ahri#5259"
-  version: 1.0
+  version: 1.0.2
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 64f16cf19702bc042b1afec4db9bcc8b, type: 3}

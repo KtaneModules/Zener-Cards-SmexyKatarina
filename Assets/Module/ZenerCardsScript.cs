@@ -125,6 +125,7 @@ public class ZenerCardsScript : MonoBehaviour {
 			_moduleSelectable.Children[i] = _cardButtons[i];
 		}
 		_moduleSelectable.UpdateChildren();
+		if (!_choosing) { _choosing = true; }
 		yield break;
 	}
 
@@ -152,8 +153,19 @@ public class ZenerCardsScript : MonoBehaviour {
 			yield return "sendtochaterror Incorrect shape name. Possible shapes are " + possibleShapes.Join(", ") + ". Please try again.";
 			yield break;
 		}
+		yield return null;
 		_cardButtons[Array.IndexOf(possibleShapes, args[0])].OnInteract();
 		yield return "solve";
+		yield break;
+	}
+
+	IEnumerator TwitchHandleForcedSolve() 
+	{
+		StopAllCoroutines();
+		StartCoroutine(ChooseCard());
+		while (!_choosing) yield return null;
+		yield return null;
+		_cardButtons[_chosenCard].OnInteract();
 		yield break;
 	}
 
